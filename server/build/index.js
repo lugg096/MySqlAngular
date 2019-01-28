@@ -27,7 +27,7 @@ class Server {
     }
     start() {
         this.app.listen(this.app.get('port'), () => {
-            console.log('Servidor en puerto', this.app.get('port'));
+            console.log('server en puerto', this.app.get('port'));
         });
     }
 }

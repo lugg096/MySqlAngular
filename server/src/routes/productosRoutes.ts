@@ -9,7 +9,12 @@ class ProductosRoutes {
     }
 
     config():void{
-        this.router.get('/',productosController.index);
+        this.router.get('/',productosController.List);
+        this.router.post('/',productosController.CrearProductos);
+        this.router.delete('/:id',productosController.EliminarProductos);
+        this.router.get('/:id',productosController.ListOne);
+        this.router.put('/:id',productosController.ActualizarProducto);
+        
     }
 
 }

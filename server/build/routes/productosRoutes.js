@@ -8,7 +8,11 @@ class ProductosRoutes {
         this.config();
     }
     config() {
-        this.router.get('/', productosController_1.productosController.index);
+        this.router.get('/', productosController_1.productosController.List);
+        this.router.post('/', productosController_1.productosController.CrearProductos);
+        this.router.delete('/:id', productosController_1.productosController.EliminarProductos);
+        this.router.get('/:id', productosController_1.productosController.ListOne);
+        this.router.put('/:id', productosController_1.productosController.ActualizarProducto);
     }
 }
 const productosRoutes = new ProductosRoutes();
